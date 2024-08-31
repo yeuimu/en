@@ -254,6 +254,9 @@
 <section class="px-6 max-w-prose mx-auto md:px-0">
   <!-- toc -->
   
+    <!-- tocbot -->
+<nav class="post-toc toc text-sm w-48 relative top-6 lg:top-32 lg:right-0 lg:fixed opacity-70"></nav>
+  
   <!-- header -->
   <header class="pt-6 pb-6">
     <div class="pt-4 md:pt-6">
@@ -272,7 +275,7 @@
           </span>
           <span class="flex items-center gap-1">
             <iconify-icon width="18" icon="icon-park-outline:font-search" ></iconify-icon>
-            <span>0 words</span>
+            <span>204 words</span>
           </span>
           
             <span class="flex items-center gap-1">
@@ -286,7 +289,18 @@
   </header>
   <!-- content -->
   <article class="post-content prose m-auto slide-enter-content dark:prose-invert">
-    
+    <h2 id="What-is-LSP"><a href="#What-is-LSP" class="headerlink" title="What is LSP?"></a>What is LSP?</h2><p>Developing an editor with features like automatic completion and definition search involves a substantial amount of work. The editor has to devlop similar features specially for every language and the LSP simplifies the development process. The full name of the LSP is ‘Language Server Protocol’, which defines the protocol between the editor and the language for communication. Most features, such as automatic completion, are available if the language supports LSP and the editor has implemented LSP for that specific language. In such cases, the experience with these features remains consistent, even when using different editors.</p>
+<p>There are many editors currently supporting LSP such as well-known Vscode. Vim after version 8 and neovim also supports LSP detail from <a target="_blank" rel="noopener" href="https://microsoft.github.io/language-server-protocol/implementors/tools/">official site of LSP</a>, and <a target="_blank" rel="noopener" href="https://microsoft.github.io/language-server-protocol/implementors/servers/">languages supporting LSP</a></p>
+<p>The neovim already supports LSP, for more detail, refer to <a target="_blank" rel="noopener" href="https://neovim.io/doc/user/lsp.html">the config doc</a>, which detaily descripts how config LSP with any language. But this process is more complex, so official provides the <a target="_blank" rel="noopener" href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig</a> plugin. In the next moment, we configs LSP of neovim through the plugin.</p>
+<h2 id="Select-LSP-and-Config-For-python"><a href="#Select-LSP-and-Config-For-python" class="headerlink" title="Select LSP and Config For python"></a>Select LSP and Config For python</h2><p>lsp: pyright<br>lspconfig: pyright<br>formatter: autopep8</p>
+<p>Relation link: </p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://lazy.folke.io/">lazy.nvim: plugin manager</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.andersevenrud.net/neovim.github.io/lsp/">lsp config for neovim</a></li>
+<li><a target="_blank" rel="noopener" href="https://mason-registry.dev/registry/list">mason package for lsp or formatter</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/stevearc/conform.nvim?tab=readme-ov-file#list_all_formatters">conform.nvim: formatter</a></li>
+</ol>
+
   </article>
   <!-- tag -->
   <div class="mt-12 pt-6 border-t border-gray-200">
